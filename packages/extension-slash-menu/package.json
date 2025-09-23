@@ -1,0 +1,42 @@
+{
+  "name": "@chi-hum/tiptap-simple-slash-menu",
+  "description": "Slash menu extension for tiptap (headless, powered by @tiptap/suggestion)",
+  "version": "0.0.0",
+  "keywords": [
+    "tiptap",
+    "tiptap extension",
+    "slash menu",
+    "suggestion"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./dist/index.d.ts",
+        "require": "./dist/index.d.cts"
+      },
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "devDependencies": {
+      "@tiptap/core": "^3.4.4",
+      "@tiptap/suggestion": "^3.4.4"
+  },
+  "peerDependencies": {
+      "@tiptap/core": "^3.4.4",
+      "@tiptap/suggestion": "^3.4.4"
+  },
+  "scripts": {
+    "build": "tsup",
+    "lint": "prettier ./src/ --check && eslint --cache --quiet --no-error-on-unmatched-pattern ./src/"
+  }
+}
